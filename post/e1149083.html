@@ -24,22 +24,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"kiray.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="客户端配置 查看服务端的共享目录showmount -e ,例如： 1234# showmount -e 192.168.2.4Export list for 192.168.2.4:&#x2F;export     *&#x2F;export&#x2F;HDD * 挂载命令 mouunt 选项 -t nfs：指定挂载为NFS，可以省略。-o ro：挂载为只读。-o rw：挂载为读写。-o port&#x3D;n：指定NFS服务器端口号">
+<meta name="description" content="首先安装Chocolatey 用管理员开启powershell运行下面的代码   1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Debian10配置NFS">
-<meta property="og:url" content="https://kiray.xyz/post/fbf33bb7.html">
+<meta property="og:title" content="Windows Terminal 安装及配置">
+<meta property="og:url" content="https://kiray.xyz/post/e1149083.html">
 <meta property="og:site_name" content="Kira&#39;s World">
-<meta property="og:description" content="客户端配置 查看服务端的共享目录showmount -e ,例如： 1234# showmount -e 192.168.2.4Export list for 192.168.2.4:&#x2F;export     *&#x2F;export&#x2F;HDD * 挂载命令 mouunt 选项 -t nfs：指定挂载为NFS，可以省略。-o ro：挂载为只读。-o rw：挂载为读写。-o port&#x3D;n：指定NFS服务器端口号">
+<meta property="og:description" content="首先安装Chocolatey 用管理员开启powershell运行下面的代码   1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-30T12:21:38.000Z">
-<meta property="article:modified_time" content="2020-07-30T16:36:17.750Z">
+<meta property="article:published_time" content="2021-01-14T15:18:03.000Z">
+<meta property="article:modified_time" content="2021-01-14T23:54:38.374Z">
 <meta property="article:author" content="Kira">
-<meta property="article:tag" content="NFS">
-<meta property="article:tag" content="debian">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kiray.xyz/post/fbf33bb7.html">
+<link rel="canonical" href="https://kiray.xyz/post/e1149083.html">
 
 
 <script data-pjax class="page-configurations">
@@ -51,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Debian10配置NFS | Kira's World</title>
+<title>Windows Terminal 安装及配置 | Kira's World</title>
   
 
 
@@ -191,7 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">客户端配置</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%AE%89%E8%A3%85Chocolatey"><span class="nav-number">1.</span> <span class="nav-text">首先安装Chocolatey</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8Chocolatey%E5%AE%89%E8%A3%85Windows-Terminal"><span class="nav-number">2.</span> <span class="nav-text">用Chocolatey安装Windows Terminal</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Windows-Terminal-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">Windows Terminal 配置文件详解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E4%B8%BB%E9%A2%98%E9%85%8D%E8%89%B2"><span class="nav-number">4.</span> <span class="nav-text">手动主题配色</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -267,7 +265,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kiray.xyz/post/fbf33bb7.html">
+    <link itemprop="mainEntityOfPage" href="https://kiray.xyz/post/e1149083.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -280,7 +278,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Debian10配置NFS
+          Windows Terminal 安装及配置
         </h1>
 
         <div class="post-meta-container">
@@ -291,14 +289,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-07-30 20:21:38" itemprop="dateCreated datePublished" datetime="2020-07-30T20:21:38+08:00">2020-07-30</time>
+      <time title="创建时间：2021-01-14 23:18:03" itemprop="dateCreated datePublished" datetime="2021-01-14T23:18:03+08:00">2021-01-14</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-07-31 00:36:17" itemprop="dateModified" datetime="2020-07-31T00:36:17+08:00">2020-07-31</time>
+        <time title="修改时间：2021-01-15 07:54:38" itemprop="dateModified" datetime="2021-01-15T07:54:38+08:00">2021-01-15</time>
       </span>
 
   
@@ -311,23 +309,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><ol>
-<li><p>查看服务端的共享目录<code>showmount -e </code>,例如：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> showmount -e 192.168.2.4</span></span><br><span class="line">Export list for 192.168.2.4:</span><br><span class="line">/export     *</span><br><span class="line">/export/HDD *</span><br></pre></td></tr></table></figure></li>
-<li><p>挂载命令 <code>mouunt</code> 选项</p>
-<p>-t nfs：指定挂载为NFS，可以省略。<br>-o ro：挂载为只读。<br>-o rw：挂载为读写。<br>-o port=n：指定NFS服务器端口号。<br>-o retry=n：指定挂载重试时间，单位为分钟。前台挂载的默认值为2,后台挂载的默认值为10000。<br>-o fg：以前台方式挂载。如果出现连接错误，会占一直用终端窗口，直到超时。<br>-o bg：使用后台方式完成挂载，不会占用终端窗口</p>
-<p>注意：-o选项可以通过逗号(,)分隔，联合使用。</p>
-<p>例子： </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t nfs -o rw,bg,retry=1  192.168.2.4:/export/HDD  /nfs/hdd</span><br></pre></td></tr></table></figure>
+        <h5 id="首先安装Chocolatey"><a href="#首先安装Chocolatey" class="headerlink" title="首先安装Chocolatey"></a>首先安装Chocolatey</h5><ul>
+<li><p>用管理员开启powershell运行下面的代码</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).    DownloadString(&#x27;https://chocolatey.org/install.ps1&#x27;))</span><br></pre></td></tr></table></figure></li>
+<li><p>检测是否安装成功=&gt;在powershell运行 <code>choco -v</code></p>
 </li>
-<li><p>卸载NFS客户端</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">umount /nfs/hdd</span><br></pre></td></tr></table></figure></li>
-<li><p>开机自动挂载nfs</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nano /etc/fstab</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加以下内容末尾</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &lt;file system&gt;          &lt;dir&gt;  &lt;<span class="built_in">type</span>&gt;&lt;options&gt;   &lt;dump&gt;	&lt;pass&gt;</span></span><br><span class="line">192.168.2.4:/export/HDD /nfs/hdd nfs defaults 0 0</span><br></pre></td></tr></table></figure>
-
-
+<li><p>升级Chocolatey=&gt;在powershell运行 <code>choco upgrade chocolatey</code></p>
 </li>
-</ol>
+</ul>
+<h5 id="用Chocolatey安装Windows-Terminal"><a href="#用Chocolatey安装Windows-Terminal" class="headerlink" title="用Chocolatey安装Windows Terminal"></a>用Chocolatey安装Windows Terminal</h5><ul>
+<li><p>在powershell中运行下面的代码，等待完成即可</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install microsoft-windows-terminal</span><br></pre></td></tr></table></figure></li>
+<li><p>要使用chocolate升级Windows Terminal，请运行以下命令:</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco upgrade microsoft-windows-terminal</span><br></pre></td></tr></table></figure>
+<h5 id="Windows-Terminal-配置文件详解"><a href="#Windows-Terminal-配置文件详解" class="headerlink" title="Windows Terminal 配置文件详解"></a>Windows Terminal 配置文件详解</h5></li>
+<li><p>在界面点击设置 打开配置的Json文件，将下面的代码插入相应的位置</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;profiles&quot;: &#123;</span><br><span class="line">   &quot;defaults&quot;: &#123;</span><br><span class="line">   &quot;acrylicOpacity&quot;: 0.1, //背景透明度(0-1)</span><br><span class="line">   &quot;useAcrylic&quot;: true, // 启用毛玻璃</span><br><span class="line">   &quot;backgroundImage&quot;: &quot;ms-appdata:///roaming/bg01.jpg&quot;, //背景图片 图片存入RoamingState文件夹</span><br><span class="line">   &quot;backgroundImageOpacity&quot;: 0.25, //图片透明度（0-1）</span><br><span class="line">   &quot;experimental.retroTerminalEffect&quot;: true, //复古的CRT 效果</span><br><span class="line">   &quot;backgroundImageStretchMode&quot;: &quot;uniformToFill&quot;, //填充模式</span><br><span class="line">   &quot;icon&quot;: &quot;&quot;, //图标</span><br><span class="line">   &quot;fontFace&quot;: &quot;Sarasa Term SC&quot;, //字体</span><br><span class="line">   &quot;fontSize&quot;: 12, //文字大小</span><br><span class="line">   &quot;colorScheme&quot;: &quot;Solarized Dark&quot;, //主题名字</span><br><span class="line">   &quot;cursorColor&quot;: &quot;#FFFFFF&quot;, //光标颜色</span><br><span class="line">   &quot;cursorShape&quot;: &quot;bar&quot;, //光标形状</span><br><span class="line">   &quot;startingDirectory&quot;: &quot;D://Projects//&quot;, //起始目录</span><br><span class="line">   &quot;antialiasingMode&quot;: &quot;cleartype&quot; //消除文字锯齿</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="手动主题配色"><a href="#手动主题配色" class="headerlink" title="手动主题配色"></a>手动主题配色</h5></li>
+</ul>
 
     </div>
 
@@ -350,7 +349,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://kiray.xyz/post/fbf33bb7.html" title="Debian10配置NFS">https://kiray.xyz/post/fbf33bb7.html</a>
+      <a href="https://kiray.xyz/post/e1149083.html" title="Windows Terminal 安装及配置">https://kiray.xyz/post/e1149083.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -358,23 +357,16 @@
 </ul>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/NFS/" rel="tag"><i class="fa fa-tag"></i> NFS</a>
-              <a href="/tags/debian/" rel="tag"><i class="fa fa-tag"></i> debian</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/post/17351282.html" rel="prev" title="OMV5安装ISCSI-Target">
-                  <i class="fa fa-chevron-left"></i> OMV5安装ISCSI-Target
+                <a href="/post/45d83c46.html" rel="prev" title="Cmder 常用设置技巧">
+                  <i class="fa fa-chevron-left"></i> Cmder 常用设置技巧
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/post/36bf6f03.html" rel="next" title="使用Streamlink定时录制youtube直播节目">
-                  使用Streamlink定时录制youtube直播节目 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -491,7 +483,7 @@ document.addEventListener('pjax:success', () => {
       quicklink.listen({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://kiray.xyz/post/fbf33bb7.html',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://kiray.xyz/post/e1149083.html',]
       });
       });
   </script>
